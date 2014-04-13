@@ -1,6 +1,5 @@
 LookuperApp
 ===========
+Lookuper is appliaction that created for help to track webpage changes.
 
-Lookuper application repository
-
-Lookuper is appliaction that crated for helping to track webpage changes.
+LookuperData project - Data access layer with SQLite connector.
