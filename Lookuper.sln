@@ -14,6 +14,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LookuperModel", "LookuperMo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LookuperView", "LookuperView\LookuperView.csproj", "{02E83911-D1C1-4F1F-AC3C-594EC935F3E1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Release", "Release", "{D22830BB-C2FB-4252-B089-8A7401B5AF7B}"
+	ProjectSection(SolutionItems) = preProject
+		Release\Lookuper  Alpha 1.exe = Release\Lookuper  Alpha 1.exe
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
