@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{7DB51780-DDC5-42B0-96C5-52B8E688AF15}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>LookuperModel</RootNamespace>
     <AssemblyName>LookuperModel</AssemblyName>
@@ -29,12 +29,22 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>LookuperModel.Startup</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="AutoMapper">
       <HintPath>..\packages\AutoMapper.3.2.0-ci1042\lib\net40\AutoMapper.dll</HintPath>
     </Reference>
     <Reference Include="AutoMapper.Net4">
       <HintPath>..\packages\AutoMapper.3.2.0-ci1042\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="HtmlAgilityPack">
       <HintPath>..\packages\HtmlAgilityPack.1.4.6\lib\Net45\HtmlAgilityPack.dll</HintPath>
@@ -44,7 +54,18 @@
     </Reference>
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.92.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.92.0\lib\net45\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.92.0\lib\net45\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.92.0\lib\net45\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
     <Reference Include="System.Windows" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
@@ -71,6 +92,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="SimpleDataComparer.cs" />
+    <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LookupperData\LookupperData.csproj">
@@ -86,6 +108,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="x64\SQLite.Interop.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\SQLite.Interop.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\AutoMapper.3.2.0-ci1042\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.2.0-ci1042\tools\AutoMapper.targets')" />
