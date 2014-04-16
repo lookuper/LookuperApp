@@ -19,6 +19,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Release", "Release", "{D228
 		Release\Lookuper  Alpha 1.exe = Release\Lookuper  Alpha 1.exe
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Screenshots", "Screenshots", "{2BB08DFF-26E4-446E-9377-81FFD7B2676B}"
+	ProjectSection(SolutionItems) = preProject
+		screenshots\LookuperDiff.png = screenshots\LookuperDiff.png
+		screenshots\LookuperItemConfiguration.png = screenshots\LookuperItemConfiguration.png
+		screenshots\LookuperMainPage.png = screenshots\LookuperMainPage.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
